@@ -3,7 +3,6 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
 /* function to check if a random number generated is negative or positive */
 int main(void)
 {
