@@ -3,7 +3,14 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/** function to check if a random number generated is negative or positive */
+/**
+ * main - Entry point
+ *
+ * function to check if a random number generated is negative or positive
+ *
+ * Return: Always 0 (success)
+ *
+ */
 int main(void)
 {
 	int n;
