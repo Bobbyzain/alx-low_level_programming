@@ -10,6 +10,5 @@
 int main(void)
 {
 	putcharPrinter();
-	putchar('\n');
 	return (0);
 }
