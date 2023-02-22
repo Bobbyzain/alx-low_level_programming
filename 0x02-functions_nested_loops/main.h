@@ -1,21 +1,31 @@
 #include <stdio.h>
 
 /**
- * putcharPrinter - Entry point
- *
+ * main - Entry point
+ * putcharPrinter - nested function
  * Return: 0 Always (success)
  */
 
-int putcharPrinter(void)
+int main(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	/**
+	 * putcharPrinter - to print the putchar output
+	 *
+	 * Return: 0 Always (success)
+	 */
+	int putcharPrinter(void)
+	{
+		putchar('_');
+		putchar('p');
+		putchar('u');
+		putchar('t');
+		putchar('c');
+		putchar('h');
+		putchar('a');
+		putchar('r');
+		putchar('\n');
+		return (0);
+	}
+	putcharPrinter();
 	return (0);
 }

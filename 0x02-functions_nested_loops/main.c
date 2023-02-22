@@ -9,6 +9,6 @@
 
 int main(void)
 {
-	putcharPrinter();
-	return (0);
+        putcharPrinter();
+        return (0);
 }
