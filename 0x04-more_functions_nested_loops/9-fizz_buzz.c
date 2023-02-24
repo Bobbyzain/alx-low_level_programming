@@ -32,15 +32,19 @@ int fizz_buzz(void)
 	int c;
 	char *m;
 	char *n;
+	char *o;
 
 	m = "Fizz";
 	n = "Buzz";
+	o = "FizzBuzz";
 	for (c = 1; c <= 100; c++)
 	{
-		if (c % 3 == 0)
+		if (c % 3 == 0 && c % 5 != 0)
 			printf("%s ", m);
-		else if (c % 5 == 0)
+		else if (c % 5 == 0 && c % 3 != 0)
 			printf("%s ", n);
+		else if (c % 3 == 0 && c % 5 == 0)
+                        printf("%s ", o);
 		else
 			printf("%d ", c);
 	}
