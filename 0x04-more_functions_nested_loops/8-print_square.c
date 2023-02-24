@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_line - Entry point
+ * print_square - Entry point
  *
- * @n: my integer variable counting the amount of print times
+ * @size: my integer variable counting the amount of print times
  * Return: 0 Always (success)
  */
 
