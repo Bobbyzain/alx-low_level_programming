@@ -44,7 +44,7 @@ int fizz_buzz(void)
 		else if (c % 5 == 0 && c % 3 != 0)
 			printf("%s ", n);
 		else if (c % 3 == 0 && c % 5 == 0)
-                        printf("%s ", o);
+			printf("%s ", o);
 		else
 			printf("%d ", c);
 	}
