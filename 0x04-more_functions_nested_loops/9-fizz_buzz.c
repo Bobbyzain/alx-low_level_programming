@@ -8,7 +8,6 @@
  */
 
 int fizz_buzz(void);
-
 /**
  * main - Entry point
  * Description: Entry point for the main fizzbuzz function
@@ -20,7 +19,6 @@ int main(void)
 	fizz_buzz();
 	return (0);
 }
-
 /**
  * fizz_buzz - function proper
  * Description: As written above
@@ -48,6 +46,6 @@ int fizz_buzz(void)
 		else
 			printf("%d ", c);
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
