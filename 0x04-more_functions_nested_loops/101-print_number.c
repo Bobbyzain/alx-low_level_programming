@@ -8,19 +8,10 @@
 
 void print_number(int n)
 {
-	int num1;
-	int num2;
-	int num3;
-	int num4;
-	int num1a;
-	int num2a;
-	int num3a;
-	int p;
+	int num1, num2, num3, num4, num1a, num2a, num3a, p;
 
 	if (n < 0)
-	{
 		p = n * -1;
-	}
 	else
 		p = n;
 	num1 = p % 10;
@@ -44,32 +35,26 @@ void print_number(int n)
 			_putchar(num2 + 48);
 		}
 		else if (num2 > 0)
-		{
 			_putchar(num2 + 48);
-		}
 		_putchar(num1 + 48);
-        	_putchar('\n');
+		_putchar('\n');
 	}
 	else if (n < 0)
 	{
+		_putchar('-');
 		if (num4 > 0)
 		{
-			_putchar('-');
 			_putchar(num4 + 48);
 			_putchar(num3 + 48);
 			_putchar(num2 + 48);
 		}
 		else if (num3 > 0)
 		{
-			_putchar('-');
 			_putchar(num3 + 48);
 			_putchar(num2 + 48);
 		}
 		else if (num2 > 0)
-		{
-			_putchar('-');
 			_putchar(num2 + 48);
-		}
 		_putchar(num1 + 48);
 		_putchar('\n');
 	}
