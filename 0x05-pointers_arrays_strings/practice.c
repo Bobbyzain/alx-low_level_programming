@@ -14,9 +14,8 @@ int main(void)
 
 	p = n;
 
-	for (i = 0; i < 5; i++)
-	{
-		printf("%d\n", *(p + i));
-	}
+	
+	printf("%d\n", p[-1]);
+	
 	return (0);
 }
