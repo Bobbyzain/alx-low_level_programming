@@ -11,11 +11,10 @@
 
 void print_array(int *a, int n)
 {
-	int i, j;
+	int i;
 
 	i = 0;
-	j = sizeof(a);
-	if (j >= n)
+	if (n > 0)
 	{
 		while (i < n - 1)
 		{
@@ -24,7 +23,5 @@ void print_array(int *a, int n)
 		}
 		printf("%d", a[i]);
 	}
-	else
-		putchar('\n');
 	putchar('\n');
 }
