@@ -6,6 +6,7 @@
  * Description: to copy elements in a string to a destination
  * @dest: a char pointer param that the location to copy to
  * @src: a char param containing the source string
+ * @n: number of characters in the source to be copied
  * Return: The content of the destination file
  */
 
