@@ -3,14 +3,14 @@
 
 /**
  * cap_string - My special function
- * @c: collecting the strings to change to uppercase
+ * @s: collecting the strings to change to uppercase
  * Return: char output consisting of uppercase string
  */
 
-char *cap_string(char *c)
+char *cap_string(char *s)
 {
 	int i;
-	char *t = c;
+	char *t = s;
 
 	for (i = 0; t[i] != '\0'; i++)
 	{
