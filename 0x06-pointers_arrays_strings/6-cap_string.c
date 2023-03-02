@@ -19,7 +19,7 @@ char *cap_string(char *s)
 			{
 				s[i] = s[i] - 32;
 			}
-			else if (s[i - 1] == '\n' || s[i - 1] == 9)
+			else if (s[i - 1] == '\n' || s[i - 1] == 9 || i == 0)
 			{
 				s[i] = s[i] - 32;
 			}
