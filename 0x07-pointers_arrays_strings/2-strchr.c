@@ -2,9 +2,10 @@
 
 /**
  * _strchr - My string parsing function
+ * Description: To find & return a pointer 'r' to a character within a string
  * @s: Pointer to the string I want to parse through
  * @c: The character whose occurence I am searching for
- * return: Pointer to the 1st occurence of c in s
+ * Return: Pointer to the 1st occurence of c in s else NULL
  */
 
 char *_strchr(char *s, char c)
@@ -12,7 +13,7 @@ char *_strchr(char *s, char c)
 	int i = 0;
 	char *r;
 
-	for (;s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 		{
