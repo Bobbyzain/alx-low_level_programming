@@ -20,6 +20,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				return (haystack);
 				k++;
+				break;
 			}
 			else
 				break;
