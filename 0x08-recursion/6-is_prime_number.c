@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
-i* is_prime_number - my function
+ * is_prime_number - my function
  * @n: Integer to comfirm if prime number
+ * @i: iterator
  * Description: To determine the prime number status
  * Return: 1 or 0 if prime number or not, respectively
  */
