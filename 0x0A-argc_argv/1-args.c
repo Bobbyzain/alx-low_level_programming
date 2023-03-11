@@ -9,7 +9,7 @@
  * Return: The name of the program
  */
 
-int main(int argc, __attribute__((unused)) char* argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
 	int count = 0;
 
