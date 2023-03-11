@@ -7,9 +7,8 @@
  * Return: the integer which the string input was converted to
  */
 
-/**
- * int _atoi(char *s)
- * {
- * return (0);
- * }
- */
+int _atoi(char *s)
+{
+	*s = 'x';
+	return (0);
+}

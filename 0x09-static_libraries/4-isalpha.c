@@ -7,9 +7,8 @@
  * Return: the integer which the string input was converted to
  */
 
-/**
- * int _isalpha(int c)
- * {
- * return (0);
- * }
- */
+int _isalpha(int c)
+{
+	c = 1;
+	return (c);
+}

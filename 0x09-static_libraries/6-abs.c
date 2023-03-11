@@ -7,9 +7,8 @@
  * Return: the integer which the string input was converted to
  */
 
-/**int _abs(int c)
- * {
- * return (0);
- * }
- */
-
+int _abs(int c)
+{
+	c = 0;
+	return (c);
+}
