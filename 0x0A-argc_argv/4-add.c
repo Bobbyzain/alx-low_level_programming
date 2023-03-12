@@ -10,26 +10,30 @@
  * Return: 0
  */
 
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, __attribute__((unused)) char*argv[])
 {
 	int count = 1;
+	int rs;
 	int sum = 0;
 
 	if (argc > 1)
 	{
 		while (count < argc)
 		{
-			if (*argv[count] < '0' || *argv[count] > '9')
+			rs = 0;
+			while (argv[count][rs] != '\0')
 			{
-				printf("Error\n");
-				return (0);
+				if (argv[count][rs] < '0' || argv[count][rs] > '9')
+				{
+					printf("Error\n");
+					return (0);
+					break;
+				}
+				else
+					rs++;
 			}
-
-			else
-			{
-				sum += atoi(argv[count]);
-				count++;
-			}
+			sum += atoi(argv[count]);
+			count++;
 		}
 		printf("%d\n", sum);
 	}
