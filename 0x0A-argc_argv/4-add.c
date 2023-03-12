@@ -10,7 +10,7 @@
  * Return: 0
  */
 
-int main(int argc, __attribute__((unused)) char*argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
 	int count = 1;
 	int rs;
@@ -27,7 +27,6 @@ int main(int argc, __attribute__((unused)) char*argv[])
 				{
 					printf("Error\n");
 					return (0);
-					break;
 				}
 				else
 					rs++;
