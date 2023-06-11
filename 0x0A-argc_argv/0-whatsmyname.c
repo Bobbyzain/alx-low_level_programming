@@ -2,8 +2,10 @@
 #include "main.h"
 
 /**
- * main: Entry point for my program
- *
+ * main - Entry point for my program
+ * Descripton: Intro to the construction of command line arguments
+ * @argc: the number of arguments passed to the main function
+ * @argv: the argument vector
  * Return: Always 0
  */
 
