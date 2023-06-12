@@ -14,17 +14,25 @@ int main(int argc, char *argv[])
 {
 	int x = 1;
 	int y = 0;
+	int z;
 
 	if (argc > 1)
 	{
 		for (; x < argc; x++)
 		{
-			y += atoi(argv[x]);
+			z = atoi(argv[x]);
+			if (z >= '0' && z <= '9')
+				y += z;
+			else
+			{
+				printf("Error\n");
+				break;
+			}
 		}
-		printf("%d\n", y);
+		return (y);
 	}
 	else if (argc == 1)
-		printf("0\n");
+		printf("%d\n", y);
 	else
 	{
 		printf("Error\n");
