@@ -10,11 +10,11 @@
  * Return: Always 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
-	int i = 0;
-	int sum = 0;
-	int count;
+        int i = 0;
+        int sum = 0;
+        int count;
 
 	if (argc > 1)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 				if (argv[i][count] < '0' || argv[i][count] > '9')
 				{
 					printf("Error\n");
-					return (1);
+					return (0);
 				}
 				else
 					count++;
@@ -39,6 +39,6 @@ int main(int argc, char *argv[])
 	else if (argc == 1)
 		printf("%d\n", sum);
 
-	return (0);
+        return (0);
 }
 
