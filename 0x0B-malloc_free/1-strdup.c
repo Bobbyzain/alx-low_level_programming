@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * *_strdup - special function
- * @*str: a pointer of xters in the array
- * 
+ * _strdup - special function
+ * @str: a pointer of xters in the array
+ *
  * Return: Null if size is 0 else pointer to array
  */
 
@@ -22,6 +22,5 @@ char *_strdup(char *str)
 		t[i] = str[i];
 		i++;
 	}
-
 	return (t);
 }
