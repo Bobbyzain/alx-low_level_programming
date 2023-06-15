@@ -19,9 +19,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (0);
 	}
-	if (atoi(argv[1]) < 0)
-		printf("0\n");
-
+	/**
+	 * if (atoi(argv[1]) < 0)
+	 *	printf("0\n");
+	 */
 	min_num = cents(atoi(argv[1]));
 	printf("%d\n", min_num);
 	return (0);
@@ -72,7 +73,8 @@ int cents(int x)
 	if (x <= 0)
 	{
 		y = 0;
-		num = y;
+		return (0);
+
 	}
 	return (num);
 }
