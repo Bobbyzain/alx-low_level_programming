@@ -64,9 +64,14 @@ int cents(int x)
 			z = x % 2;
 		num = y + cents(z);
 	}
-	if (x <= 1)
+	if (x == 1)
 	{
 		y = x / 1;
+		num = y;
+	}
+	if (x <= 0)
+	{
+		y = 0;
 		num = y;
 	}
 	return (num);
