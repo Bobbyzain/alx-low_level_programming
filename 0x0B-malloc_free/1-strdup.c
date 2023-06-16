@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	int i = 0;
 	char *t;
 
-	t = malloc(INT_MAX);
+	t = malloc(sizeof(*str) * 1024);
 	if (str == NULL)
 		return (NULL);
 	if (t == NULL)
