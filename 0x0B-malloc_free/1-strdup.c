@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <limits.h>
 /**
  * _strdup - special function
  * @str: a pointer of xters in the array
@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	int i = 0;
 	char *t;
 
-	t = malloc(sizeof(*str) * 1024);
+	t = malloc(INT_MAX);
 	if (str == NULL)
 		return (NULL);
 	if (t == NULL)
