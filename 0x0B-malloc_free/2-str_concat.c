@@ -2,36 +2,46 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+
 /**
- * _strdup - special function
- * @str: a pointer of xters in the array
+ * str_concat - special function
+ * @s1: a pointer to xters in the array
+ * @s2: a pointer to xters in the array
  *
  * Return: Null if size is 0 else pointer to array
  */
 
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	int i, j = 0;
+	int i = 0;
+	int j = 0;
+	int k = 0;
 	char *t;
 
-	while (str[i] != '\0')
-	{
-		j++;
-		i++;
-	}
-	t = malloc(sizeof(*str) * 1024);
-	printf("%d\n", j);
-	if (str == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
+
+	for (; s1[i] != '\0'; i++)
+	for (; s2[j] != '\0'; j++)
+
+	t = malloc(sizeof(char) * (i + j + 1));
+
 	if (t == NULL)
 		exit(1);
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	while (s1[i] != '\0')
 	{
-		t[i] = str[i];
+		t[k] = s1[i];
 		i++;
+		k++;
 	}
-	/* str[i] = '\0'; */
+	while (s2[j] != '\0')
+	{
+		t[k] = s2[j];
+		j++;
+		k++;
+	}
 	return (t);
 	free(t);
 }
