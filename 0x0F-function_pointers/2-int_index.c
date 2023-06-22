@@ -20,7 +20,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	n = array;
 	if (cmp == NULL || array == NULL)
-		exit(1);
+		return (-1);
 	ptr = cmp;
 
 	i = 0;
