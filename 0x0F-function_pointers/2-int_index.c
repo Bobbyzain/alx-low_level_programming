@@ -29,6 +29,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 	j = size;
 	while (i < j)
 	{
+		ptr(n[i]);
 		if (ptr(n[i]))
 			return (i);
 		i++;
