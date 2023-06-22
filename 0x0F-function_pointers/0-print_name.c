@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -7,14 +6,15 @@
  * @name: Pointer to a string of characters
  * @f: A function pointer with no return value
  *
- * Return: none
+ * Return: Nothing
  */
 
 void print_name(char *name, void (*f)(char *))
 {
 	void (*ptr)(char *);
+	char *n;
 
+	n = name;
 	ptr = f;
-	ptr(name);
-
+	ptr(n);
 }
