@@ -1,5 +1,6 @@
 #include "function_pointers.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_name - Entry point that takes function pointer as one of its inputs
@@ -15,6 +16,8 @@ void print_name(char *name, void (*f)(char *))
 	char *n;
 
 	n = name;
+	if (f == NULL)
+		exit(1);
 	ptr = f;
 	ptr(n);
 }
