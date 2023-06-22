@@ -4,7 +4,7 @@
 #include <stddef.h>
 
 /**
- * array_iterator - Entry point that takes function pointer as one of its inputs
+ * array_iterator - Entry point that takes function pointer
  * @array: Pointer to an int type
  * @size: size of the array
  * @action: Pointer to function
@@ -19,7 +19,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	unsigned int i, j;
 
 	n = array;
-	if (action == NULL)
+	if (action == NULL || array == NULL)
 		exit(1);
 	ptr = action;
 	i = 0;
