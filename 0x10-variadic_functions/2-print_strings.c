@@ -43,7 +43,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	if (i == n - 1)
 	{
-		char * q = va_arg(args, char *);
+		char *q = va_arg(args, char *);
 
 		if (q == NULL)
 			q = "(nil)";
