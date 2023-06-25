@@ -16,5 +16,12 @@ struct dog
 };
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+/**
+ * typedef struct dog_t - 2nd structure for defining dogs
+ * @name: 1st descriptor
+ * @age: 2nd descriptor
+ * @owner: 3rd descriptor
+ */
+typedef struct dog dog_t;
 
 #endif
