@@ -10,5 +10,7 @@ int _pow_recursion(int x, int y);
 int power(int m, int n);
 int _sqrt_recursion(int n);
 int squareroot(int i, int j);
+int is_prime_number(int n);
+int prime(int i, int j);
 
 #endif
