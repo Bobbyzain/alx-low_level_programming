@@ -2,7 +2,7 @@
 
 /**
  * _sqrt_recursion - My recursiive function name
- * @n: The number to find the square root of 
+ * @n: The number to find the square root of
  * Return: Integer
  */
 int _sqrt_recursion(int n)
@@ -11,6 +11,8 @@ int _sqrt_recursion(int n)
 
 	if (y == 1)
 		return (1);
+	if (y < 0)
+		return (-1);
 	x = squareroot(y, z);
 	if (x == y)
 		return (-1);
@@ -24,11 +26,13 @@ int _sqrt_recursion(int n)
  */
 int squareroot(int i, int j)
 {
+	int k;
+
+	k = j * j;
 	if (j == i)
 		return (j);
-	if (j * j != i)
-		squareroot(i, j + 1);
-	else
+	else if (k == i)
 		return (j);
-	return (0);
+	k = squareroot(i, j + 1);
+	return (k);
 }
