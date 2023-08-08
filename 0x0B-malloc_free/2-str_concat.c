@@ -10,38 +10,43 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i = 0, j = 0, k, l = 0;
-	char *s;
+	char *s, *s3, *s4;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		s = malloc(sizeof(char) * 1);
-		if (s == NULL)
-			return (NULL);
-		s[0] = '\0';
-		return (s);
-		free(s);
+		s3 = malloc(sizeof(char) * 1);
+		if (s3 == NULL)
+			exit(1);
+		s3[0] = '\0';
 	}
-	while (s1[i] != '\0')
-		i++;
-	while (s2[j] != '\0')
-		j++;
+	else
+		s3 = s1;
+	if (s2 == NULL)
+	{
+		s4 = malloc(sizeof(char) * 1);
+		if (s4 == NULL)
+			exit(1);
+		s4[0] = '\0';
+	}
+	else
+		s4 = s2;
+	for (; s3[i] != '\0'; i++)
+	for (; s4[j] != '\0'; j++)
 	k = i + j + 1;
 	s = malloc(k * sizeof(char));
 	if (s == NULL)
-		return (NULL);
-	while (l < i)
+		exit(1);
+	for (; s3[l] != '\0'; l++)
 	{
-		s[l] = s1[l];
+		s[l] = s3[l];
+	}
+	for (j = 0; s4[j] != '\0'; j++)
+	{
+		s[l] = s4[j];
 		l++;
 	}
-	j = 0;
-	while (l < k)
-	{
-		s[l] = s2[j];
-		l++;
-		j++;
-	}
-	s[k -  1] = '\0';
 	return (s);
 	free(s);
+	free(s3);
+	free(s4);
 }
