@@ -20,10 +20,12 @@ char *_strdup(char *str)
 	if (s == NULL)
 		return (NULL);
 
-	while (j < i)
+	while (str[j] != '\0')
 	{
 		s[j] = str[j];
 		j++;
 	}
+	s[i] = '\0';
 	return (s);
+	free(s);
 }
