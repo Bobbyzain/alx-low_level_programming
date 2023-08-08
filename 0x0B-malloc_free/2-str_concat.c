@@ -30,16 +30,16 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 		s4 = s2;
-	for (; s3[i] != '\0'; i++)
-	for (; s4[j] != '\0'; j++)
+	while (s3[i] != '\0')
+		i++;
+	while (s4[j] != '\0')
+		j++;
 	k = i + j + 1;
 	s = malloc(k * sizeof(char));
 	if (s == NULL)
 		exit(1);
 	for (; s3[l] != '\0'; l++)
-	{
 		s[l] = s3[l];
-	}
 	for (j = 0; s4[j] != '\0'; j++)
 	{
 		s[l] = s4[j];
