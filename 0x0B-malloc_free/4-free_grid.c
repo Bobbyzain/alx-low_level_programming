@@ -11,6 +11,8 @@ void free_grid(int **grid, int height)
 {
 	int x = 0, y;
 
+	if (grid == NULL)
+		exit(1);
 	while (x <= height)
 	{
 		y = 0;
