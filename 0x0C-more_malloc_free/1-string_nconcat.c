@@ -42,11 +42,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	while (u[j] != '\0')
 		j++;
-	if (n > j)
+	if (n >= j)
 		n = j;
 	s = malloc(sizeof(char) * (i + n + 1));
 	if (s == NULL)
-		exit(1);
+		return (NULL);
 	for (i = 0; t[i] != '\0'; i++)
 	{
 		s[k] = t[i];
