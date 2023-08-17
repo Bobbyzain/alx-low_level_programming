@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int a, b;
 	char *op;
+	int fn;
 
 	if (argc != 4)
 	{
@@ -21,8 +22,13 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	op = argv[2];
 
-	if (get_op_func(op)(a, b) == NULL)
+	fn = get_op_func(op)(a, b);
+	if (sizeof(fn) != sizeof(int))
+	{
+		printf("Error\n");
 		exit(99);
+	}
 
-	return (get_op_func(op)(a, b));
+	printf("%d\n", fn);
+	return (0);
 }
