@@ -37,10 +37,10 @@ int op_sub(int a, int b)
 
 int op_mul(int a, int b)
 {
-        int d;
+	int d;
 
-        d = a * b;
-        return (d);
+	d = a * b;
+	return (d);
 }
 /**
  * op_div - Division
@@ -51,15 +51,15 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-        int d;
+	int d;
 
 	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-        d = a / b;
-        return (d);
+	d = a / b;
+	return (d);
 }
 /**
  * op_mod - Modulo
@@ -70,13 +70,13 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-        int d;
+	int d;
 
 	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-        d = a % b;
-        return (d);
+	d = a % b;
+	return (d);
 }

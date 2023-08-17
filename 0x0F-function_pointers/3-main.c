@@ -23,11 +23,6 @@ int main(int argc, char *argv[])
 	op = argv[2];
 
 	fn = get_op_func(op)(a, b);
-	if (sizeof(fn) != sizeof(int))
-	{
-		printf("Error\n");
-		exit(99);
-	}
 
 	printf("%d\n", fn);
 	return (0);
