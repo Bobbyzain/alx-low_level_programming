@@ -35,9 +35,9 @@ unsigned int binary_to_uint(const char *b)
 
 unsigned int bin_to_dec(const char *bin, int size, int vd)
 {
-	int n = 16, adj, i, a[16], temp[16];
+	int n = 64, adj, i, a[64], temp[64];
 	unsigned int d = 0;
-	int k = size, p = 0, q = 15;
+	int k = size, p = 0, q = n - 1;
 
 	for (i = 0; i < n; i++)
 		a[i] = 1 << i;

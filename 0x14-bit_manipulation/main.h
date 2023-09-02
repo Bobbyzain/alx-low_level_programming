@@ -7,5 +7,6 @@
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 unsigned int bin_to_dec(const char *bin, int size, int vd);
+void print_binary(unsigned long int n);
 
 #endif
