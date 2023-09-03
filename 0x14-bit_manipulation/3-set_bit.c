@@ -9,13 +9,13 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int q = *n;
-	unsigned long int i, j = index;
+	unsigned long int q = *n, k = 1;
+	unsigned int j = index, i = 63;
 
-	/*while (q > (1 << i))
-		i++;
-	if (i < j)
-		return (-1);*/
-	i = q | (1 << j);
-	return (i);
+	/*while (q > (1 << i))*/
+	/*	i++;*/
+	if (index > i)
+		return (-1);
+	*n = ((k << j) | q);
+	return (1);
 }
