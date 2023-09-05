@@ -18,11 +18,6 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fpf = open(argv[1], O_RDONLY);
-	if (fpf == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
@@ -30,20 +25,20 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	bytes_read = read(fpf, buffer, 1024);
-	if (bytes_read == -1)
+	written = write_copied(bytes_read, buffer, argv[2]);
+	if (fpf == -1 || bytes_read == -1)
 	{
 		close(fpf);
 		free(buffer);
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	close_res = close(fpf);
 	if (close_res != 0)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fpf);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fpf);
 		exit(100);
 	}
-	written = write_copied(bytes_read, buffer, argv[2]);
 	free(buffer);
 	return (written);
 }
@@ -62,22 +57,17 @@ int write_copied(int read_t, char *buf, char *f_name)
 		return (-1);
 
 	fpt = open(f_name, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fpt == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", f_name);
-		exit(99);
-	}
 	written =  write(fpt, buf, read_t);
-	if (written == -1)
+	if (fpt == -1 || written == -1)
 	{
 		close(fpt);
-		dprintf(2, "Error: Can't write to %s\n", f_name);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f_name);
 		exit(99);
 	}
 	close_res = close(fpt);
 	if (close_res != 0)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fpt);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fpt);
 		exit(100);
 	}
 	return (written);
